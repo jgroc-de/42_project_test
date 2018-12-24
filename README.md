@@ -10,6 +10,5 @@
 
 ## Push_Swap
 
-- 
-- 
--
+- mettre le .sh à la racine du dossier corriger
+- ./test.sh X (X un entier, genre 10 = nombre de test pour chaque longueur de liste) 
