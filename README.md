@@ -26,3 +26,8 @@
 
 - regarder les récursives des fonctions de listes chainées
 - utilisation de write?
+
+## À faire
+
+- modifier BUFF_SIZE pourGNL
+- aouter shabanq #!/bin/bash pour les scripts?
