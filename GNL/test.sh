@@ -6,7 +6,7 @@
 #    By: jgroc-de <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/25 14:19:22 by jgroc-de          #+#    #+#              #
-#    Updated: 2019/03/30 17:27:12 by jgroc-de         ###   ########.fr        #
+#    Updated: 2019/03/30 18:23:09 by jgroc-de         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ else
 		./test_gnl $f > tmpgnl
 		diff tmpcat tmpgnl
 		#echo "\t*test leaks de $f"
-		#valgrind ./test_gnl $f | grep lost
+		valgrind ./test_gnl $f | grep "lost"
 		#valgrind --leak-check=full $0 $f | grep lost
 		echo "**fin test de $f"
 		((i++))
@@ -44,9 +44,9 @@ else
 		./test_gnl $3 $4
 	fi
 	echo "** début test de null"
-	./test_gnl $f /dev/null
+	./test_gnl /dev/null
 	echo "** fin test de null"
 	echo "début test de random"
-	./test_gnl $f /dev/random
+	./test_gnl /dev/random
 	echo "** fin test de null"
 fi
